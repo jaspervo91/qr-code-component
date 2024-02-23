@@ -1,0 +1,94 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-alice-blue: hsl(212, 45%, 89%);
+  --color-slate-gray: hsl(220, 15%, 55%);
+  --color-delft-blue: hsl(218, 44%, 22%);
+  --shadow-color: 213deg 19% 56%;
+  --shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-alice-blue);
+  color: var(--color-delft-blue);
+  font-family: "Outfit", sans-serif;
+}
+
+h1 {
+  font-size: 1.728rem;
+}
+
+h2 {
+  font-size: 1.44rem;
+}
+
+p {
+  max-width: 50ch;
+}
+
+h1,
+h2 {
+  max-width: 20ch;
+}
+
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 0.25lh;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+::-moz-selection {
+  background: var(--color-delft-blue);
+  color: var(--color-white);
+}
+
+::selection {
+  background: var(--color-delft-blue);
+  color: var(--color-white);
+}
+
+/* Utilities */
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+/* Blocks */
+.card {
+  max-width: 20rem;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.card img {
+  border-radius: 10px;
+}
+.card p {
+  color: var(--color-slate-gray);
+}
+
+.attribution {
+  padding: 1rem;
+}
