@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | QR code component</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --color-slate-900: hsl(218, 44%, 22%);
+        --color-slate-500: hsl(216, 15%, 48%);
+        --color-slate-300: hsl(212, 45%, 89%);
+        --color-white: hsl(0, 0%, 100%);
+
+        --font-base: "Outfit", sans-serif;
+
+        --space-500: 2.5rem;
+        --space-300: 1.5rem;
+        --space-200: 1rem;
+
+        --shadow-color: 213deg 19% 56%;
+        --shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+          0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+          2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+          5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+      }
+
+      body {
+        background: var(--color-slate-300);
+        color: var(--color-slate-900);
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-base);
+        letter-spacing: 0.2px;
+        line-height: 1.4;
+      }
+
+      :is(h1, h2) {
+        letter-spacing: 0;
+        line-height: 1.2;
+        max-inline-size: 30ch;
+      }
+
+      h1 {
+        font-size: 1.728rem;
+      }
+
+      h2 {
+        font-size: 1.44rem;
+      }
+
+      p {
+        max-inline-size: 60ch;
+      }
+
+      a {
+        color: currentColor;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      :focus {
+        outline-offset: 0.25lh;
+        outline: 2px solid currentColor;
+      }
+
+      main {
+        display: flex;
+        flex: auto;
+        padding: 2em;
+      }
+
+      ::selection {
+        background: var(--color-slate-900);
+        color: var(--color-white);
+      }
+
+      /* Compositional layouts */
+      .flow > * + * {
+        margin-block-start: var(--flow-space, 1em);
+      }
+
+      /* Utilities */
+      .visually-hidden {
+        block-size: 1px;
+        clip-path: inset(50%);
+        inline-size: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+      }
+
+      /* Blocks */
+      .card {
+        background: var(--color-white);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        margin: auto;
+        max-inline-size: 320px;
+        padding: var(--space-200);
+        padding-block-end: var(--space-500);
+        text-align: center;
+      }
+
+      .card img {
+        border-radius: 10px;
+      }
+
+      .card h2 {
+        --flow-space: var(--space-300);
+      }
+
+      .card p {
+        color: var(--color-slate-500);
+      }
+
+      .site-foot {
+        padding: var(--space-200);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="visually-hidden">QR code component</h1>
+      <article class="card flow">
+        <img
+          src="images/image-qr-code.png"
+          alt="QR code to Frontend Mentor website" />
+        <h2>Improve your front-end skills by building projects</h2>
+        <p>
+          Scan the QR code to
+          <a href="https://www.frontendmentor.io">visit Frontend Mentor</a> and
+          take your coding skills to the next level
+        </p>
+      </article>
+    </main>
+    <footer class="site-foot">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by Jasper.
+      </p>
+    </footer>
+  </body>
+</html>
